@@ -4,13 +4,21 @@ import VueRouter from 'vue-router'
 // 2. 手动安装 VueRouter 
 Vue.use(VueRouter)
 
+// 导入 vue-resource
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
+
 // 按需导入 mint-ui 组件
-import { Header } from 'mint-ui'
+import { Header, Swipe, SwipeItem } from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header)
+Vue.component(Swipe.name, Swipe)
+Vue.component(SwipeItem.name, SwipeItem)
 
 // 导入mui 样式
 import './lib/mui/css/mui.css'
+// 导入mui字体样式
+import './lib/mui/css/icons-extra.css'
 
 // 导入 app 组件
 import app from './App.vue'
